@@ -1,7 +1,7 @@
-@import url("static/css/reset.css");
+@import url("/static/css/reset.css");
 @font-face {
   font-family: "Montserrat";
-  src: url("static/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url("/static/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
 }
 body {
