@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,20 +17,22 @@
                     <li><a href="/">ГЛАВНАЯ</a></li>
                     <li><a href="/shop.html">МАГАЗИН</a></li>
                     <li>ПРАВИЛА</li>
-                    <li>НОВОСТИ</li>
+                    <li><a href="https://t.me/avasuka">НОВОСТИ</a></li>
                 </ul>
             </div>
             <div class="header-icons">
                 <img src="img/earth.svg" alt="смена языка" id="lang">
-                <img src="img/user_icon.svg" alt="личный кабинет">
+                <a href="/account.html">
+                    <img src="img/user_icon.svg" alt="личный кабинет">
+                </a>
             </div>
         </div>
     </header>
     <main>
         <h1>АваСука</h1>
         <p>Тысячи игроков уже с нами - присоединяйся и играй на самом <br>популярном и функциональном сервере!</p>
-        <button class="main_btn">
-            <span>СКАЧАТЬ</span>
+        <button class="main_btn" id="mainButton">
+            <span id="buttonText">СКАЧАТЬ</span>
         </button>
     </main>
     <footer>
@@ -38,6 +40,39 @@
             <img src="img/censure.svg" alt="ограничение">
         </div>
     </footer>
+
+    <!-- reg-modal -->
+
+    <div class="modal" id="reg">
+        <div class="reg-popup">
+            <h1>Вход</h1>
+            <form action="" class="reg">
+                <input type="text" placeholder="E-mail">
+                <input type="text" placeholder="Пароль">
+                <div class="forward-btns">
+                    <button type="submit" class="continue">Продолжить</button>
+                    <button type="submit" class="vk-continue">
+                        <img src="img/VK_Compact_Logo_(2021-present).svg 1.svg" alt="">
+                    </button>
+                </div>
+                <button type="submit" style="color: #8C8C8C; padding: 1.5rem 0;" id="forgotPass">Забыли пароль?</button>
+            </form>
+            <p style="color: #282828">*Если у вас нет аккаунта, он будет создан</p>
+        </div>
+    </div>
+
+    <div class="modal-forgot" id="forgot">
+        <div class="forgot-popup">
+            <h1>Изменить пароль</h1>
+            <form action="" class="forgot">
+                <input type="text" placeholder="Пароль">
+                <input type="text" placeholder="Повтори новый пароль">
+                <button type="submit" class="resetPass">Продолжить</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- reg-modal -->
 
     <!-- Development -->
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
@@ -48,5 +83,7 @@
     <script src="https://unpkg.com/tippy.js@6"></script>
 
     <script src="static/js/tooltipka.js"></script>
+    <script src="static/js/baseButton.js"></script>
+    <script src="static/js/popup.js"></script>
 </body>
 </html>

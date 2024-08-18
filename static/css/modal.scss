@@ -1,0 +1,321 @@
+$main-color: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
+$main-color-deg: linear-gradient(135deg, #ff9a8b 0%, #ff6b88 51%, #ff98ab 100%);
+$bg-white: #FCFCFC;
+$header-padding: 20px;
+$header-margin: 10px;
+$gap: 30px;
+$text-secondary: #282828;
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background-color: #00000060;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.reg-popup {
+    padding: 20px 40px;
+    background: #fff;
+    border-radius: 30px;
+
+    h1 {
+        text-align: center;
+        background: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+
+        font-size: 2rem;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+
+    .reg {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input[type="text"] {
+            width: 100%;
+            border: 3px solid #FF848A;
+            border-radius: 15px;
+            padding: .8rem 4rem;
+        }
+
+        .forward-btns {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 15px;
+
+            .continue {
+                background: $main-color;
+                border-radius: 15px;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            .vk-continue > img {
+                height: 50px;
+            }
+        }
+    }
+
+    transform: scale(0);
+    transition: .4s;
+}
+
+.modal.open .reg-popup {
+    transform: scale(1);
+    transition: .4s;
+}
+
+// pass reset
+
+.modal-forgot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background-color: #00000060;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+
+.modal-forgot.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.forgot-popup {
+    padding: 20px 40px;
+    background: #fff;
+    border-radius: 30px;
+
+    h1 {
+        text-align: center;
+        background: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+
+        font-size: 2rem;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+
+    .forgot {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input[type="text"] {
+            width: 100%;
+            border: 3px solid #FF848A;
+            border-radius: 15px;
+            padding: .8rem 4rem;
+        }
+
+        .resetPass {
+            background: $main-color;
+            border-radius: 15px;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+
+    transform: scale(0);
+    transition: .4s;
+}
+
+.modal-forgot.open .forgot-popup {
+    transform: scale(1);
+    transition: .4s;
+}
+
+.resetPass {
+    height: 50px;
+}
+
+// pass reset
+
+// set mail
+
+.modal-mail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background-color: #00000060;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+
+.modal-mail.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mail-popup {
+    padding: 20px 40px;
+    background: #fff;
+    border-radius: 30px;
+
+    h1 {
+        text-align: center;
+        background: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+
+        font-size: 2rem;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+
+    .mail {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input[type="text"] {
+            width: 100%;
+            border: 3px solid #FF848A;
+            border-radius: 15px;
+            padding: .8rem 4rem;
+        }
+
+        .setMail {
+            background: $main-color;
+            border-radius: 15px;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+
+    transform: scale(0);
+    transition: .4s;
+}
+
+.modal-mail.open .mail-popup {
+    transform: scale(1);
+    transition: .4s;
+}
+
+.setMail {
+    height: 50px;
+}
+
+// set mail
+
+// delete acc
+
+.modal-delete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background-color: #00000060;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+
+.modal-delete.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.delete-popup {
+    padding: 20px 40px;
+    background: #fff;
+    border-radius: 30px;
+
+    h1 {
+        text-align: center;
+        background: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+
+        font-size: 2rem;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+
+    .delete {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .deleteAcc {
+            background: $main-color;
+            border-radius: 15px;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+
+    p {
+        text-align: center;
+        padding-bottom: 20px;
+        max-width: 600px;
+    }
+
+    max-width: 500px;
+    transform: scale(0);
+    transition: .4s;
+}
+
+.modal-delete.open .delete-popup {
+    transform: scale(1);
+    transition: .4s;
+}
+
+.deleteAcc {
+    height: 50px;
+}
+
+// delete acc

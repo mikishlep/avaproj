@@ -1,3 +1,3 @@
-export function gems() {
-    
-}
+import { baseButton } from "./baseButton";
+
+baseButton();

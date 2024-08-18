@@ -1,4 +1,5 @@
 @import url(/static/css/reset.css);
+@import url(modal.css);
 @font-face {
   font-family: "Montserrat";
   src: url(/static/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
@@ -61,7 +62,7 @@ header .header-list ul li::after {
   background: #fff;
   position: absolute;
   left: 0;
-  bottom: -3px;
+  bottom: 0;
   transition: width 0.5s;
 }
 header .header-list ul li:hover::after {
@@ -74,6 +75,7 @@ header .header-icons {
 }
 header .header-icons img {
   height: 30px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   header .header-container {

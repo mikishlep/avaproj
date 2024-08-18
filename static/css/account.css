@@ -1,4 +1,5 @@
 @import url("/static/css/reset.css");
+@import url(modal.css);
 @font-face {
   font-family: "Montserrat";
   src: url("/static/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
@@ -10,6 +11,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+}
+
+html, body {
+  height: 100%;
 }
 
 header {
@@ -88,112 +93,117 @@ header .header-icons img {
   }
 }
 
+main {
+  flex: 1;
+}
 main .wrap {
   width: 80%;
-  margin: 40px auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-main .good-container {
-  display: grid;
-  grid-template-columns: auto 1fr 1fr;
-  gap: 3rem;
-  box-shadow: 0 0 89px -39px rgba(0, 0, 0, 0.25);
-  background: #fff;
-  border-radius: 25px;
-  padding: 20px;
-  transition: 0.6s;
-}
-main .good-container:hover {
-  transform: scale(1.01);
-}
-main .img-wrap img {
-  background: linear-gradient(135deg, #ff9a8b 0%, #ff6b88 51%, #ff98ab 100%);
-  padding: 50px;
-  border-radius: 20px;
-  height: 300px;
-  width: 300px;
-}
-main .text-wrap {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 0;
-  justify-content: space-around;
-}
-main .text-wrap h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-main .text-wrap p {
+main .wrap h1 {
   color: #282828;
 }
-main .text-wrap .good-sec-text {
-  color: #f3f3f3;
-}
-main .text-wrap .none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  color: transparent;
-}
-main .text-wrap .grey {
-  color: #B5B5B5;
-}
-main .text-wrap .radio {
+main .wrap .account-info {
+  background: #fff;
+  box-shadow: 0 0 89px -39px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
-main .text-wrap .radio label {
-  margin-right: 20px;
-  font-size: 1.2rem;
-  cursor: default;
+main .wrap .account-colorchange {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
-main .text-wrap .black {
-  color: #000;
+main .wrap .change-color {
+  background: #fff;
+  box-shadow: 0 0 89px -39px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
 }
-main .text-wrap b {
-  margin-right: 30px;
-}
-main .text-wrap input[type=radio] {
-  height: 1.5rem;
-  width: 1.5rem;
-  margin-right: 5px;
+main .wrap input[type=color] {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
-main .underline {
-  text-decoration: underline;
+main .wrap input[type=color]::-moz-color-swatch {
+  border: none;
 }
-main .shop-wrap {
-  position: relative;
+main .wrap input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 0;
 }
-main .shop-wrap .shop-elems {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 2rem;
+main .wrap input[type=color]::-webkit-color-swatch {
+  border: none;
+}
+main .wrap .colorInput {
+  height: 120px;
+  width: 120px;
+}
+main .wrap .inputText > h1 {
   background: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-main .shop-wrap .shop-elems button {
-  background: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
-  border-radius: 10px;
+main .wrap .inputText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-main .shop-wrap .shop-elems button img {
-  height: 40px;
-  padding: 5px;
+main .wrap .info-content {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+}
+main .wrap .info-content .lk-color ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .wrap .info-content .lk-color li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #282828;
+  font-size: 1.2rem;
+}
+main .wrap .info-content .acc-li {
+  background: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main .wrap .settings {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  color: #fff;
+  font-size: 1rem;
+}
+main .wrap .settings button {
+  background: linear-gradient(90deg, #ff9a8b 0%, #ff6b88 52%, #ff98ab 100%);
+  font-weight: 600;
+  padding: 0.6rem 0;
+  border-radius: 12px;
+}
+main h1 {
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 footer {
@@ -215,4 +225,4 @@ footer .tg-footer {
 footer .tg-footer img {
   display: flex;
   align-items: center;
-}/*# sourceMappingURL=shop.css.map */
+}/*# sourceMappingURL=account.css.map */

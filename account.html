@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/account.css">
+    <title>АваСука - магазин</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="/"><img src="img/avalogo.svg" alt="логотип"></a>
+            </div>
+            <div class="header-list">
+                <ul class="list">
+                    <li><a href="/">ГЛАВНАЯ</a></li>
+                    <li><a href="/shop.html">МАГАЗИН</a></li>
+                    <li>ПРАВИЛА</li>
+                    <li><a href="https://t.me/avasuka">НОВОСТИ</a></li>
+                </ul>
+            </div>
+            <div class="header-icons">
+                <img src="img/earth.svg" alt="смена языка" id="lang">
+                <a href="/account.html">
+                    <img src="img/user_icon.svg" alt="личный кабинет">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <h1>Привет!</h1>
+            <div class="account-info">
+                <div class="info-content">
+                    <div class="first-grid lk-color">
+                        <ul>
+                            <li><span class="acc-li">Ваш ID: </span>
+                                <span class="list">497026</span>
+                            </li>
+                            <li><span class="acc-li">Ваша роль: </span>
+                                <span class="list" id="role">пользователь</span>
+                            </li>
+                            <li><span class="acc-li">Покупки: </span>
+                                <span class="list" id="purchases">
+                                    ...
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="second-grid lk-color">
+                        <ul>
+                            <li><span class="acc-li">Ваш ВК: </span>
+                                <span class="list" id="vk-link">vk.com/mikishlep</span>
+                            </li>
+                            <li><span class="acc-li">Дата регистрации: </span>
+                                <span class="list" id="first-date">2023.12.29 08:48:08 (230 дней назад)</span>
+                            </li>
+                            <li><span class="acc-li">Последний онлайн: </span>
+                                <span class="list" id="last-date">15.08.2024 04:49:48</span>
+                            </li>
+                            <li><span class="acc-li" id="IP">IP входа: </span>
+                                <span class="list">45.9.214.120</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="quit">
+                        <button class="quit-btn" type="submit">
+                            <img src="img/alt.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="settings">
+                    <button class="get-premium" onclick="window.location.href='shop.html';">
+                        Приобрести премиум
+                    </button>
+                    <button class="get-gem" onclick="window.location.href='shop.html';">
+                        Купить алмазы
+                    </button>
+                    <button class="add-mail" id="setMail">
+                        Привязать e-mail
+                    </button>
+                    <button class="change-password" id="forgotPass">
+                        Изменить пароль
+                    </button>
+                    <button class="res-acc" id="deleteAcc">
+                        Сбросить аккаунт
+                    </button>
+                </div>
+            </div>
+            <div class="account-colorchange">
+                <div class="change-color">
+                    <form action="" class="colorInput">
+                        <input type="color" value="#ff6b88" name="nick-color" id="chatColorChange">
+                    </form>
+                    <div class="inputText">
+                        <h1>Цвет чата</h1>
+                        <p class="funcAllow" id="chatColor">Функция недоступна. Приобретите привилегию в магазине</p>
+                    </div>
+                </div>
+                <div class="change-color">
+                    <form action="" class="colorInput">
+                        <input type="color" value="#ff6b88" name="nick-color" id="nickColorChange">
+                    </form>
+                    <div class="inputText">
+                        <h1>Цвет ника</h1>
+                        <p class="funcAllow" id="chatColor">Функция недоступна. Приобретите привилегию в магазине</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrap">
+            <div class="text-footer">
+                &copy; AvaSuka 2020.
+                <span class="cens-footer">
+                    18+
+                </span>
+            </div>
+            <div class="tg-footer">
+                <a href="https://t.me/avasuka">
+                    <img src="img/telegram.svg" alt="тг">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-forgot" id="forgot">
+        <div class="forgot-popup">
+            <h1>Изменить пароль</h1>
+            <form action="" class="forgot">
+                <input type="text" placeholder="Пароль">
+                <input type="text" placeholder="Повтори новый пароль">
+                <button type="submit" class="resetPass">Продолжить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-mail" id="mail">
+        <div class="mail-popup">
+            <h1>Привязать почту</h1>
+            <form action="" class="mail">
+                <input type="text" placeholder="Введите почту">
+                <button type="submit" class="setMail">Продолжить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-delete" id="delete">
+        <div class="delete-popup">
+            <h1>Сброс аккаунта</h1>
+            <p>Вся одежда (включая одежду из праздничных и премиум магазинов) будет удалена, также будет удалена квартира и мебель.
+                Приятели, клуб, эффекты, алмазы на счету, премиум-подписка и иные приобретения сохранятся. <br><br>
+                
+                Нажми на кнопку, если уверен, что хочешь продолжить 
+            </p>
+            <form action="" class="delete">
+                <button type="submit" class="deleteAcc">Сбросить аккаунт</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Development -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+    <!-- Production -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="static/js/tooltipka.js"></script>
+    <script src="static/js/popup.js"></script>
+</body>
+</html>
